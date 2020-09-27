@@ -115,6 +115,7 @@ function onImageScroll(evt) {
     if (getImageIndex === 0) {
       onCloseModal(); // закрытие модального окна при нажатии влево при открытом ПЕРВОМ изображении
       getImageIndex += 1; // чтобы не было ошибки в консолип при обращении к несуществующему индексу. Ничего лучше не придумал!!!
+      // getImageIndex = galleryItems.length;
       // return; // либо просто эта строка без закрытия модалки
     }
     getImageIndex -= 1;
@@ -125,6 +126,7 @@ function onImageScroll(evt) {
     if (getImageIndex === galleryItems.length - 1) {
       onCloseModal(); // закрытие модального окна при нажатии вправо при открытом ПОСЛЕДНЕМ изображении
       getImageIndex -= 1; // чтобы не было ошибки в консолип при обращении к несуществующему индексу. Ничего лучше не придумал!!!
+      // getImageIndex = -1;
       // return; // либо просто эта строка без закрытия модалки
     }
     getImageIndex += 1;
